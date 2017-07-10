@@ -7,8 +7,7 @@
 
 // Variables
 $theme-color: #564474;
-$alt-theme-color: #d7d8d8;
-$font-color: #637c84;
+$alt-theme-color: #034d65;
 $theme-font: 'Raleway', sans-serif;
 
 #home-wrap {
@@ -36,14 +35,14 @@ $theme-font: 'Raleway', sans-serif;
 
 // Each section follows these styling rules (excluding first)
 .section-wrap {
-  height: 400px;
+  height: auto;
   padding-top: 30px;
+  padding-bottom: 20px;
   border-bottom: 1px #000000 solid;
   h2 {
     text-align: center;
     font-weight: 600;
-    font-size: 1.6em;
-    color: $font-color;
+    font-size: 2.2em;
   }
 }
 
@@ -52,7 +51,6 @@ $theme-font: 'Raleway', sans-serif;
 .menu {
   text-align: center;
   z-index: 1;
-
 }
 
 .title-bar {
@@ -74,7 +72,8 @@ $theme-font: 'Raleway', sans-serif;
 
 // Section 2 Styling
 #section-2-wrap {
-  background-color: $alt-theme-color;
+  background-color: $white;
+  color: $alt-theme-color;
 }
 
 
@@ -82,12 +81,14 @@ $theme-font: 'Raleway', sans-serif;
 // Section 3 Styling
 #section-3-wrap {
   background-color: $alt-theme-color;
+  color: $white;
 }
 
 
 // Section 4 Styling
 #section-4-wrap {
-  background-color: $alt-theme-color;
+  background-color: $white;
+  color: $alt-theme-color;
 }
 
 
@@ -95,4 +96,60 @@ $theme-font: 'Raleway', sans-serif;
 // Section 5 Styling
 #section-5-wrap {
   background-color: $alt-theme-color;
+  color: $white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: $theme-font;
+}
+
+#contact-details {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.contact-form {
+  input {
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-top: 3px;
+  }
+  label {
+    color: $white;
+    font-size: 1.2rem;
+    margin-top: 25px;
+  }
+  textarea {
+    height: 150px;
+    border-radius: 2px;
+    margin-top: 5px;
+  }
+  .btn-wrap {
+    text-align: center;
+    .button {
+      width: 100px;
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 2px;
+    }
+  }
+}
+
+
+
+// Footer Styling
+
+#site-footer {
+  background-color: $white;
+  color: $alt-theme-color;
+  padding-top: 15px;
+  font-size: 0.8rem;
 }
