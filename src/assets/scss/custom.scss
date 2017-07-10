@@ -8,24 +8,42 @@
 // Variables
 $theme-color: #564474;
 $alt-theme-color: #d7d8d8;
+$font-color: #637c84;
 $theme-font: 'Raleway', sans-serif;
 
 #home-wrap {
   height: 100vh;
-  background-color: $theme-color;
+  max-height: 900px;
   color: $white;
   font-family: $theme-font;
   font-weight: 600;
-  //background-image: url('../');
+  background-image: url('../img/highSierra.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    //background-color: $theme-color;
+}
+
+.home-title {
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 // Each section follows these styling rules (excluding first)
 .section-wrap {
   height: 400px;
+  padding-top: 30px;
+  border-bottom: 1px #000000 solid;
   h2 {
     text-align: center;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.6em;
+    color: $font-color;
   }
 }
 
@@ -33,11 +51,25 @@ $theme-font: 'Raleway', sans-serif;
 // Navigation Styling
 .menu {
   text-align: center;
+  z-index: 1;
+
 }
 
-.top-bar {
-  background-color: #000000;
+.title-bar {
+  background-color: #034d65;
+  .title-bar-title {
+    font-size: 20px;
+    font-family: $theme-font;
+    margin-left: 3px;
+    font-weight: 600;
+  }
 }
+
+#responsive-menu {
+  background-color: transparent;
+}
+
+
 
 
 // Section 2 Styling
@@ -49,18 +81,18 @@ $theme-font: 'Raleway', sans-serif;
 
 // Section 3 Styling
 #section-3-wrap {
-
+  background-color: $alt-theme-color;
 }
 
 
 // Section 4 Styling
 #section-4-wrap {
-
+  background-color: $alt-theme-color;
 }
 
 
 
 // Section 5 Styling
 #section-5-wrap {
-
+  background-color: $alt-theme-color;
 }
