@@ -1,3 +1,5 @@
+// Custom Styling Sheet
+
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
@@ -15,9 +17,6 @@ $theme-font: 'Raleway', sans-serif;
   font-family: $theme-font;
   font-weight: 600;
   //background-image: url('../');
-  .row {
-    padding: 5px;
-  }
 }
 
 // Each section follows these styling rules (excluding first)
@@ -30,6 +29,15 @@ $theme-font: 'Raleway', sans-serif;
   }
 }
 
+
+// Navigation Styling
+.menu {
+  text-align: center;
+}
+
+.top-bar {
+  background-color: #000000;
+}
 
 
 // Section 2 Styling
