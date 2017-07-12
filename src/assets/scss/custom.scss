@@ -54,11 +54,21 @@ $theme-font: 'Raleway', sans-serif;
 
 .title-bar {
   background-color: #034d65;
+  width: 100%;
   .title-bar-title {
     font-size: 20px;
     font-family: $theme-font;
     margin-left: 3px;
     font-weight: 600;
+  }
+}
+.top-bar-right ul {
+  width: 100%;
+  background-color: $alt-theme-color;
+  li {
+    a {
+      color: $white;
+    }
   }
 }
 
@@ -75,12 +85,39 @@ $theme-font: 'Raleway', sans-serif;
   color: $alt-theme-color;
 }
 
+.understand-text {
+  text-align: justify;
+  line-height: 1.6;
+  font-family: $theme-font;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
 
 
 // Section 3 Styling
 #section-3-wrap {
   background-color: $alt-theme-color;
   color: $white;
+}
+
+.team-wrap {
+  text-align: center;
+  margin-top: 35px;
+  .team-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 100%;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  .team-text {
+    line-height: 1.6;
+    text-align: justify;
+  }
 }
 
 
@@ -147,9 +184,18 @@ $theme-font: 'Raleway', sans-serif;
 
 // Footer Styling
 
-#site-footer {
+#social-media {
+  padding-top: 10px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+#privacy-footer {
   background-color: $white;
   color: $alt-theme-color;
-  padding-top: 15px;
   font-size: 0.8rem;
 }
