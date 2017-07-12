@@ -6,22 +6,21 @@
 
 
 // Variables
-$theme-color: #564474;
-$alt-theme-color: #034d65;
+$theme-color: #034d65;
+$alt-theme-color: #006081;
 $theme-font: 'Raleway', sans-serif;
 
 
 // Mixins
-@mixin hoverEffect {
-  &:hover {
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition:0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-    color: $theme-color;
-  }
+@mixin transEffect {
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition:0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
+
+
 
 
 
@@ -34,6 +33,10 @@ $theme-font: 'Raleway', sans-serif;
   background: url('../img/highSierra.png') no-repeat fixed center;
   background-size: cover;
   position: relative;
+  .columns {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .home-title {
@@ -69,6 +72,7 @@ $theme-font: 'Raleway', sans-serif;
 .title-bar {
   background-color: #034d65;
   width: 100%;
+  z-index: 1;
   .title-bar-title {
     font-size: 20px;
     font-family: $theme-font;
@@ -76,14 +80,22 @@ $theme-font: 'Raleway', sans-serif;
     font-weight: 600;
   }
 }
+
+
 .top-bar-right ul {
-  width: 100%;
-  background-color: $alt-theme-color;
+  background-color: $theme-color;
+
   li {
+    @include transEffect;
+    &:hover {
+      @include transEffect;
+      background-color: $alt-theme-color;
+    }
     a {
       color: $white;
     }
   }
+
 }
 
 #responsive-menu {
@@ -96,10 +108,21 @@ $theme-font: 'Raleway', sans-serif;
 // Section 2 Styling
 #section-2-wrap {
   background-color: $white;
-  color: $alt-theme-color;
+  color: $theme-color;
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
-.understand-text {
+.service-icon {
+  font-size: 4.5rem;
+}
+
+.service-title {
+  font-size: 1.6rem;
+}
+
+.service-text {
   text-align: justify;
   line-height: 1.6;
   font-family: $theme-font;
@@ -111,7 +134,7 @@ $theme-font: 'Raleway', sans-serif;
 
 // Section 3 Styling
 #section-3-wrap {
-  background-color: $alt-theme-color;
+  background-color: $theme-color;
   color: $white;
 }
 
@@ -139,14 +162,14 @@ $theme-font: 'Raleway', sans-serif;
 // Section 4 Styling
 #section-4-wrap {
   background-color: $white;
-  color: $alt-theme-color;
+  color: $theme-color;
 }
 
 
 
 // Section 5 Styling
 #section-5-wrap {
-  background-color: $alt-theme-color;
+  background-color: $theme-color;
   color: $white;
   font-family: $theme-font;
 }
@@ -184,17 +207,24 @@ $theme-font: 'Raleway', sans-serif;
   .btn-wrap {
     text-align: center;
     .button {
-      width: 100px;
+      width: 120px;
       margin-top: 20px;
       margin-left: 10px;
       margin-right: 10px;
       font-size: 1rem;
       font-weight: 600;
       border-radius: 2px;
+      background-color: $alt-theme-color;
+      @include transEffect;
+      &:hover {
+        background-color: $white;
+        color: $theme-color;
+        font-weight: 700;
+        @include transEffect;
+      }
     }
   }
 }
-
 
 
 // Footer Styling
@@ -214,17 +244,20 @@ $theme-font: 'Raleway', sans-serif;
       display: inline-block;
       font-size: 2rem;
       a {
-        color: $alt-theme-color;
-        @include hoverEffect;
+        color: $theme-color;
+        @include transEffect;
+        &:hover {
+          @include transEffect;
+          opacity: 0.7;
+        }
       }
     }
   }
 }
 
-
 #privacy-footer {
   background-color: $white;
-  color: $alt-theme-color;
+  color: $theme-color;
   font-size: 0.9rem;
   margin-top: 10px;
 }
