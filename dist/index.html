@@ -60,26 +60,25 @@
     
     <!-- Section 2 Wrapper -->
     <section class="section-wrap" id="section-2-wrap">
-      <div class="row">
-        <h2>Understand Us</h2>
+      <div class="row text-center">
+        <h2>What Services We Provide</h2>
       </div>
     
       <!-- First Row -->
-      <div class="row">
+      <div class="row text-center">
         <div class="small-12 medium-6 columns">
-    
+          <span class="service-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
         </div>
     
         <div class="small-12 medium-6 columns">
-          <p class="understand-text">
+          <h3 class="service-title">Consultations</h3>
+          <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+            esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </div>
       </div>
@@ -87,11 +86,12 @@
       <!-- Second Row -->
       <div class="row">
         <div class="small-12 medium-6 columns">
-    
+          <span class="service-icon"><i class="fa fa-code" aria-hidden="true"></i></span>
         </div>
     
         <div class="small-12 medium-6 columns">
-          <p class="understand-text">
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -108,19 +108,17 @@
       <!-- Third Row -->
       <div class="row">
         <div class="small-12 medium-6 columns">
-    
+          <span class="service-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
         </div>
     
         <div class="small-12 medium-6 columns">
-          <p class="understand-text">
+          <h3 class="service-title">Online Presence</h3>
+          <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+            Duis aute irure dolor in reprehenderit!
           </p>
         </div>
     
@@ -224,11 +222,11 @@
         <div class="contact-form small-12 large-6 columns">
           <form>
             <label for="name">Name:
-              <input type="text" id="name" placeholder="e.g. John Smith" />
+              <input type="text" id="name" required placeholder="e.g. John Smith" />
             </label>
     
             <label for="email">E-mail:
-              <input type="email" id="email" placeholder="e.g. yourname@email.com" />
+              <input type="email" id="email" required placeholder="e.g. yourname@email.com" />
             </label>
     
             <label for="number">Phone Number:
@@ -236,17 +234,19 @@
             </label>
     
             <label>Message:
-              <textarea id="textarea" placeholder="e.g. Hi there, I was looking to use your services..."></textarea>
+              <textarea id="textarea" required placeholder="e.g. Hi there, I was looking to use your services..."></textarea>
             </label>
     
             <div class="btn-wrap">
-              <a href="#" class="button send-btn">Submit<span class=""> <!-- Font Awesome --> </span></a>
-              <a href="#" class="button reset-btn">Reset<span class=""> <!-- Font Awesome --> </span></a>
+              <a id="sendButton" class="button send-btn">Submit<span class=""> <!-- Font Awesome --> </span></a>
+              <a id="resetButton" class="button reset-btn">Reset<span class=""> <!-- Font Awesome --> </span></a>
             </div>
           </form>
         </div>
       </div>
     </section>
+    
+    
     
     <footer class="row footer-wrap">
       <div class="small-12 medium-6 text-center" id="social-media">
@@ -261,6 +261,29 @@
         <p>CompanyName &#169; 2017. Privacy Policy</p>
       </div>
     </footer>
+    
+    
+    
+    <!-- Contact Form Script -->
+    <script>
+      var sendBtn = document.getElementById('sendButton');
+      var resetBtn = document.getElementById('resetButton');
+    
+      // Input Field Variables
+      var nameField = document.getElementById('name');
+      var emailField = document.getElementById('email');
+      var textField = document.getElementById('textarea');
+    
+      sendBtn.addEventListener("click", function() {
+        alert('Hello there ' + nameField.value + '!');
+      })
+    
+      resetBtn.addEventListener("click", function() {
+        nameField.value = "";
+        emailField.value = "";
+        textField.value = "";
+      })
+    </script>
     
 
     <script src="assets/js/app.js"></script>
