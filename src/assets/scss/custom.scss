@@ -105,7 +105,7 @@ $theme-font: 'Raleway', sans-serif;
 
 
 
-// Section 2 Styling
+// Section 2 Styling - Services
 #section-2-wrap {
   background-color: $white;
   color: $theme-color;
@@ -127,12 +127,13 @@ $theme-font: 'Raleway', sans-serif;
   line-height: 1.6;
   font-family: $theme-font;
   font-weight: 400;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 
 
-// Section 3 Styling
+// Section 3 Styling - Team
 #section-3-wrap {
   background-color: $theme-color;
   color: $white;
@@ -159,7 +160,7 @@ $theme-font: 'Raleway', sans-serif;
 }
 
 
-// Section 4 Styling
+// Section 4 Styling - Statistics
 #section-4-wrap {
   background-color: $white;
   color: $theme-color;
@@ -167,7 +168,7 @@ $theme-font: 'Raleway', sans-serif;
 
 
 
-// Section 5 Styling
+// Section 5 Styling - Contact
 #section-5-wrap {
   background-color: $theme-color;
   color: $white;
