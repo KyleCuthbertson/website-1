@@ -127,7 +127,7 @@
     <div class="team-wrap small-12 medium-6 large-3 columns">
       <h3 class="team-title">Chris Harris</br>(CEO)</h3>
       <img src="assets/img/portrait-1.jpg" alt="chris harris" width="120" height="160"/>
-      <p class="team-text">
+      <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim veniam, citation ullamco laboris
@@ -138,7 +138,7 @@
     <div class="team-wrap small-12 medium-6 large-3 columns">
       <h3 class="team-title">Mark Smith</br>(Lead Developer)</h3>
       <img src="assets/img/portrait-2.jpg" alt="mark legend" width="120" height="160"/>
-      <p class="team-text">
+      <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -150,7 +150,7 @@
     <div class="team-wrap small-12 medium-6 large-3 columns">
       <h3 class="team-title">Lucy Martin</br>(Senior Developer)</h3>
       <img src="assets/img/portrait-4.jpg" alt="" width="120" height="160"/>
-      <p class="team-text">
+      <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim veniam. consectetur adipisicing elit,
@@ -161,7 +161,7 @@
     <div class="team-wrap small-12 medium-6 large-3 columns">
       <h3 class="team-title">Harriet Lockwood</br>(Lead Designer)</h3>
       <img src="assets/img/portrait-5.jpg" alt="harriet lockwood" width="120" height="160"/>
-      <p class="team-text">
+      <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -260,7 +260,9 @@
   // Input Field Variables
   var nameField = document.getElementById('name');
   var emailField = document.getElementById('email');
+  var phoneField = document.getElementById('number');
   var textField = document.getElementById('textarea');
+
 
   sendBtn.addEventListener("click", function() {
     alert('Hello there ' + nameField.value + '!');
@@ -270,5 +272,61 @@
     nameField.value = "";
     emailField.value = "";
     textField.value = "";
+  })
+
+  $(window).scroll(function(){
+    $(".home-title").css("opacity", 1 - $(window).scrollTop() / 350);
+  });
+
+
+
+  nameField.addEventListener("focus", function() {
+    nameField.style.background = "#006081";
+    nameField.style.color = "#FFFFFF";
+    nameField.style.transition = "0.5s";
+  })
+
+  nameField.addEventListener("blur", function() {
+    nameField.style.background = "#FFFFFF";
+    nameField.style.color = "#000000";
+  })
+
+
+
+
+  emailField.addEventListener("focus", function() {
+    emailField.style.background = "#006081";
+    emailField.style.color = "#FFFFFF";
+    emailField.style.transition = "0.5s";
+  })
+  emailField.addEventListener("blur", function() {
+    emailField.style.background = "#FFFFFF";
+    emailField.style.color = "#000000";
+  })
+
+
+
+
+  textField.addEventListener("focus", function() {
+    textField.style.background = "#006081";
+    textField.style.color = "#FFFFFF";
+    textField.style.transition = "0.5s";
+  })
+  textField.addEventListener("blur", function() {
+    textField.style.background = "#FFFFFF";
+    textField.style.color = "#000000";
+  })
+
+
+
+
+  phoneField.addEventListener("focus", function() {
+    phoneField.style.background = "#006081";
+    phoneField.style.color = "#FFFFFF";
+    phoneField.style.transition = "0.5s";
+  })
+  phoneField.addEventListener("blur", function() {
+    phoneField.style.background = "#FFFFFF";
+    phoneField.style.color = "#000000";
   })
 </script>

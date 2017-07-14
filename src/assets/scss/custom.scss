@@ -52,8 +52,8 @@ $theme-font: 'Raleway', sans-serif;
 // Each section follows these styling rules (excluding first)
 .section-wrap {
   height: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-bottom: 1px #000000 solid;
   h2 {
     margin: 0 auto;
@@ -84,7 +84,6 @@ $theme-font: 'Raleway', sans-serif;
 
 .top-bar-right ul {
   background-color: $theme-color;
-
   li {
     @include transEffect;
     &:hover {
@@ -124,7 +123,7 @@ $theme-font: 'Raleway', sans-serif;
 
 .service-text {
   text-align: justify;
-  line-height: 1.6;
+  line-height: 2;
   font-family: $theme-font;
   font-weight: 400;
   margin-top: 20px;
@@ -261,4 +260,36 @@ $theme-font: 'Raleway', sans-serif;
   color: $theme-color;
   font-size: 0.9rem;
   margin-top: 10px;
+}
+
+
+
+// Media Queries
+@media screen and (min-width: 640px) {
+  .home-title {
+    font-size: 3rem;
+    line-height: 5.5rem;
+  }
+
+  .top-bar {
+    margin-top: 4rem;
+  }
+
+  .top-bar-right ul {
+    background: transparent;
+    font-size: 1.5rem;
+    li {
+      &:hover {
+        background: none;
+      }
+      a {
+        @include transEffect;
+        &:hover {
+          @include transEffect;
+          color: $alt-theme-color;
+        }
+      }
+    }
+
+  }
 }
