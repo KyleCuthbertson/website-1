@@ -139,7 +139,7 @@
       <div class="row">
         <div class="team-wrap small-12 medium-6 large-3 columns">
           <h3 class="team-title">Chris Harris</br>(CEO)</h3>
-          <img src="assets/img/portrait-1.jpg" alt="chris harris" width="120" height="160"/>
+          <img src="assets/img/portrait-1.jpg" alt="chris harris" width="144" height="192"/> <!-- Original size: 120w 160h -->
           <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -150,7 +150,7 @@
     
         <div class="team-wrap small-12 medium-6 large-3 columns">
           <h3 class="team-title">Mark Smith</br>(Lead Developer)</h3>
-          <img src="assets/img/portrait-2.jpg" alt="mark legend" width="120" height="160"/>
+          <img src="assets/img/portrait-2.jpg" alt="mark legend" width="144" height="192"/>
           <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -162,7 +162,7 @@
     
         <div class="team-wrap small-12 medium-6 large-3 columns">
           <h3 class="team-title">Lucy Martin</br>(Senior Developer)</h3>
-          <img src="assets/img/portrait-4.jpg" alt="" width="120" height="160"/>
+          <img src="assets/img/portrait-4.jpg" alt="lucy martin" width="144" height="192"/>
           <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -173,7 +173,7 @@
     
         <div class="team-wrap small-12 medium-6 large-3 columns">
           <h3 class="team-title">Harriet Lockwood</br>(Lead Designer)</h3>
-          <img src="assets/img/portrait-5.jpg" alt="harriet lockwood" width="120" height="160"/>
+          <img src="assets/img/portrait-5.jpg" alt="harriet lockwood" width="144" height="192"/>
           <p class="team-text medium-10 medium-offset-1 large-12 large-offset-0 columns">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -192,6 +192,13 @@
     <section class="section-wrap" id="section-4-wrap">
       <div class="row">
         <h2>Statistics</h2>
+      </div>
+    
+      <div class="row">
+        <div class="small-12 columns">
+          <div id="example-1" class="cool">This is an example div</div>
+          <button id="example-btn">Click Me</button>
+        </div>
       </div>
     </section>
     
@@ -221,7 +228,7 @@
         </div>
     
         <div class="contact-form small-12 large-6 columns">
-          <form>
+          <form id="form">
             <label for="name">Name:
               <input type="text" id="name" required placeholder="e.g. John Smith" />
             </label>
@@ -265,8 +272,11 @@
     
     
     
+    
     <!-- Contact Form Script -->
     <script>
+    
+      // Buttons
       var sendBtn = document.getElementById('sendButton');
       var resetBtn = document.getElementById('resetButton');
     
@@ -278,20 +288,20 @@
     
     
       sendBtn.addEventListener("click", function() {
-        alert('Hello there ' + nameField.value + '!');
+        if (nameField.value.length > 3 && nameField.value.length < 11) {
+          alert('Thank you');
+        } else {
+          alert('Please enter more than 3 and less than 11 characters');
+        }
       })
+    
+    
     
       resetBtn.addEventListener("click", function() {
         nameField.value = "";
         emailField.value = "";
         textField.value = "";
       })
-    
-      $(window).scroll(function(){
-        $(".home-title").css("opacity", 1 - $(window).scrollTop() / 350);
-      });
-    
-    
     
       nameField.addEventListener("focus", function() {
         nameField.style.background = "#006081";
@@ -305,43 +315,44 @@
       })
     
     
+    // Attribute JavaScript
+    var myVar = document.getElementById("responsive-menu");
+    if (myVar.hasAttribute('class')) {
+      console.log(myVar.getAttribute('class'));
+      //myVar.removeAttribute('class');
+    }
     
+    var exampleVar = document.getElementById("example-1");
+    var exampleBtn = document.getElementById("example-btn");
     
-      emailField.addEventListener("focus", function() {
-        emailField.style.background = "#006081";
-        emailField.style.color = "#FFFFFF";
-        emailField.style.transition = "0.5s";
-      })
-      emailField.addEventListener("blur", function() {
-        emailField.style.background = "#FFFFFF";
-        emailField.style.color = "#000000";
-      })
-    
-    
-    
-    
-      textField.addEventListener("focus", function() {
-        textField.style.background = "#006081";
-        textField.style.color = "#FFFFFF";
-        textField.style.transition = "0.5s";
-      })
-      textField.addEventListener("blur", function() {
-        textField.style.background = "#FFFFFF";
-        textField.style.color = "#000000";
-      })
+    exampleBtn.addEventListener("click", function() {
+      if(exampleVar.hasAttribute('class')) {
+        exampleVar.removeAttribute('class');
+        exampleVar.setAttribute('class', 'hot');
+      }
+    })
     
     
     
     
-      phoneField.addEventListener("focus", function() {
-        phoneField.style.background = "#006081";
-        phoneField.style.color = "#FFFFFF";
-        phoneField.style.transition = "0.5s";
-      })
-      phoneField.addEventListener("blur", function() {
-        phoneField.style.background = "#FFFFFF";
-        phoneField.style.color = "#000000";
-      })
+    // Opacity style added to home title when scrolling
+      $(window).scroll(function(){
+        $(".home-title").css("opacity", 1 - $(window).scrollTop() / 350);
+      });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </script>
     
 
