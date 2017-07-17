@@ -260,7 +260,9 @@ $theme-font: 'Raleway', sans-serif;
   color: $theme-color;
   font-size: 0.9rem;
   margin-top: 10px;
+  font-weight: 600;
 }
+
 
 
 
@@ -274,7 +276,6 @@ $theme-font: 'Raleway', sans-serif;
   .top-bar {
     margin-top: 4rem;
   }
-
   .top-bar-right ul {
     background: transparent;
     font-size: 1.5rem;
@@ -290,6 +291,32 @@ $theme-font: 'Raleway', sans-serif;
         }
       }
     }
-
   }
+}
+
+@media screen and (min-width: 1024px) {
+  #contact-details {
+    margin-top: 120px;
+    h3 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  #privacy-footer {
+    margin-top: 25px;
+  }
+}
+
+.cool {
+  width: 200px;
+  height: 100px;
+  background-color: purple;
+}
+
+.hot {
+  width: 300px;
+  height: 50px;
+  background-color: green;
 }
