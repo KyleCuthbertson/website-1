@@ -159,11 +159,42 @@ $theme-font: 'Raleway', sans-serif;
 }
 
 
-// Section 4 Styling - Statistics
+// Section 4 Styling - Prices and Plans
 #section-4-wrap {
   background-color: $white;
   color: $theme-color;
+  .row {
+    margin-bottom: 40px;
+  }
 }
+
+.card {
+  color: $theme-color;
+  border-radius: 4px;
+  .card-section {
+    padding-bottom: 25px;
+    padding-top: 30px;
+    .plan-title {
+      font-size: 2.2rem;
+    }
+    .plan-price {
+      font-size: 1.7rem;
+    }
+  }
+  .card-divider {
+    background-color: $theme-color;
+    color: $white;
+    display: inline-block;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+
+
+
+
 
 
 
@@ -193,17 +224,32 @@ $theme-font: 'Raleway', sans-serif;
     margin: 0 auto;
     border-radius: 2px;
     margin-top: 3px;
+      @include transEffect;
+    &:focus {
+      background-color: $alt-theme-color;
+      color: $white;
+      @include transEffect;
+    }
   }
+
   label {
     color: $white;
     font-size: 1.2rem;
     margin-top: 25px;
   }
+
   textarea {
     height: 150px;
     border-radius: 2px;
     margin-top: 5px;
+    @include transEffect;
+    &:focus {
+      background-color: $alt-theme-color;
+      color: $white;
+      @include transEffect;
+    }
   }
+
   .btn-wrap {
     text-align: center;
     .button {
@@ -228,7 +274,6 @@ $theme-font: 'Raleway', sans-serif;
 
 
 // Footer Styling
-
 
 .footer-wrap {
   padding-bottom: 50px;
@@ -295,28 +340,28 @@ $theme-font: 'Raleway', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
+  .service-icon {
+    font-size: 6.5rem;
+    background-color: purple;
+  }
+  #section-2-wrap #first-row {
+    background-color: green;
+    vertical-align: middle;
+  }
+
+
+
   #contact-details {
-    margin-top: 120px;
+    margin-top: 90px;
     h3 {
-      font-size: 1.7rem;
+      font-size: 1.95rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.35rem;
+      margin-bottom: 50px;
     }
   }
   #privacy-footer {
     margin-top: 25px;
   }
-}
-
-.cool {
-  width: 200px;
-  height: 100px;
-  background-color: purple;
-}
-
-.hot {
-  width: 300px;
-  height: 50px;
-  background-color: green;
 }
