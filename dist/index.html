@@ -67,11 +67,11 @@
     
       <!-- First Row -->
       <div id="first-row" class="row text-center">
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-4 large-offset-0 columns">
           <span class="service-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
         </div>
     
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-0 columns">
           <h3 class="service-title">Consultations</h3>
           <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -86,11 +86,11 @@
     
       <!-- Second Row -->
       <div class="row text-center">
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-4 large-offset-0 columns">
           <span class="service-icon"><i class="fa fa-code" aria-hidden="true"></i></span>
         </div>
     
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-0 columns">
           <h3 class="service-title">Web Development</h3>
           <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -99,8 +99,7 @@
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+            occaecat cupidatat.
           </p>
         </div>
     
@@ -108,11 +107,11 @@
     
       <!-- Third Row -->
       <div class="row text-center">
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-4 large-offset-0 columns">
           <span class="service-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
         </div>
     
-        <div class="small-12 medium-10 medium-offset-1 large-6 large-offset-0 columns">
+        <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-0 columns">
           <h3 class="service-title">Online Presence</h3>
           <p class="service-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -202,11 +201,11 @@
               <p class="plan-price">£19.99/m</p>
             </div>
             <div class="card-divider">
-              <p>Detail 1</p>
-              <p>Detail 2</p>
-              <p>Detail 3</p>
-              <p>Detail 4</p>
-              <p>Detail 5</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>- Negative</p>
+              <p>- Negative</p>
             </div>
           </div>
         </div>
@@ -217,11 +216,11 @@
               <p class="plan-price">£59.99/m</p>
             </div>
             <div class="card-divider">
-              <p>Detail 1</p>
-              <p>Detail 2</p>
-              <p>Detail 3</p>
-              <p>Detail 4</p>
-              <p>Detail 5</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>- Negative</p>
             </div>
           </div>
         </div>
@@ -232,11 +231,11 @@
               <p class="plan-price">£119.99/m</p>
             </div>
             <div class="card-divider">
-              <p>Detail 1</p>
-              <p>Detail 2</p>
-              <p>Detail 3</p>
-              <p>Detail 4</p>
-              <p>Detail 5</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
+              <p>+ Positive</p>
             </div>
           </div>
         </div>
@@ -271,30 +270,80 @@
     
         <div class="contact-form small-12 large-6 columns">
           <form id="form">
-            <label for="name">Name:
+            <label for="name">*Name:
               <input type="text" id="name" required placeholder="e.g. John Smith" />
             </label>
     
-            <label for="email">E-mail:
+            <label for="email">*E-mail:
               <input type="email" id="email" required placeholder="e.g. yourname@email.com" />
             </label>
     
             <label for="number">Phone Number:
-              <input type="number" id="number" Placeholder="e.g. 07291 929281" />
+              <input type="number" id="number" placeholder="e.g. 07291 929281" />
             </label>
     
-            <label>Message:
+            <label>*Message:
               <textarea id="textarea" required placeholder="e.g. Hi there, I was looking to use your services..."></textarea>
             </label>
     
+            <p class="required-text">required</p>
+    
+            <div id="alert-fields" class="alert callout small" data-closable="fade-out">
+              <h5>Please fill in all required fields!</h5>
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+    
             <div class="btn-wrap">
-              <a id="sendButton" class="button send-btn">Submit<span class=""> <!-- Font Awesome --> </span></a>
-              <a id="resetButton" class="button reset-btn">Reset<span class=""> <!-- Font Awesome --> </span></a>
+              <a id="sendButton" class="button send-btn">Submit <span class="submit-icon"><i class="fa fa-envelope" aria-hidden="true"></i> <!-- Font Awesome --> </span></a>
+              <a id="resetButton" class="button reset-btn">Reset <span class="reset-icon"><i class="fa fa-refresh" aria-hidden="true"></i> <!-- Font Awesome --> </span></a>
             </div>
           </form>
         </div>
       </div>
     </section>
+    
+    <script>
+    
+    // Variables
+    const resetBtn = document.getElementById('resetButton');
+    const submitBtn = document.getElementById('sendButton');
+    
+    const alertField = document.getElementById('alert-fields');
+    
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const numberField = document.getElementById('number');
+    const textField = document.getElementById('textarea');
+    
+    
+    // Submit Button - Validation
+    submitBtn.addEventListener("click", () => {
+      if (nameField.value === '') {
+        nameField.style.border = '2px red solid';
+        alertField.style.display = 'block';
+      }
+    
+      if (emailField.value === '') {
+        emailField.style.border = '2px red solid';
+      }
+    
+      if (textField.value === '') {
+        textField.style.border = '2px red solid';
+      }
+    })
+    
+    // Reset Button
+    
+    resetBtn.addEventListener("click", () => {
+      nameField.value = '';
+      emailField.value = '';
+      numberField.value = '';
+      textField.value = '';
+    })
+    
+    </script>
     
     
     
@@ -314,8 +363,6 @@
     
     
     
-    
-    <!-- Contact Form Script -->
     <script>
     
     // Opacity style added to home title when scrolling
