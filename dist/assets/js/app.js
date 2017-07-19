@@ -14491,6 +14491,55 @@ window.$ = _jquery2.default;
 //import './lib/foundation-explicit-pieces';
 
 
+// Contact Form JS
+// Variables
+var resetBtn = document.getElementById('resetButton');
+var submitBtn = document.getElementById('sendButton');
+
+var alertField = document.getElementById('alert-fields');
+
+var nameField = document.getElementById('name');
+var emailField = document.getElementById('email');
+var numberField = document.getElementById('number');
+var textField = document.getElementById('textarea');
+
+// Submit Butto
+submitBtn.addEventListener("click", function () {
+  if (nameField.value === '') {
+    nameField.style.border = '2px red solid';
+    alertField.style.display = 'block';
+  }
+
+  if (emailField.value === '') {
+    emailField.style.border = '2px red solid';
+  }
+
+  if (textField.value === '') {
+    textField.style.border = '2px red solid';
+  }
+});
+
+nameField.addEventListener("keydown", function () {
+  nameField.style.border = '1px grey solid';
+});
+
+emailField.addEventListener("keydown", function () {
+  emailField.style.border = '1px grey solid';
+});
+
+textField.addEventListener("keydown", function () {
+  textField.style.border = '1px grey solid';
+});
+
+// Reset Button
+
+resetBtn.addEventListener("click", function () {
+  nameField.value = '';
+  emailField.value = '';
+  numberField.value = '';
+  textField.value = '';
+});
+
 (0, _jquery2.default)(document).foundation();
 
 /***/ }),

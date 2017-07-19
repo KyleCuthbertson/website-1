@@ -304,48 +304,6 @@
       </div>
     </section>
     
-    <script>
-    
-    // Variables
-    const resetBtn = document.getElementById('resetButton');
-    const submitBtn = document.getElementById('sendButton');
-    
-    const alertField = document.getElementById('alert-fields');
-    
-    const nameField = document.getElementById('name');
-    const emailField = document.getElementById('email');
-    const numberField = document.getElementById('number');
-    const textField = document.getElementById('textarea');
-    
-    
-    // Submit Button - Validation
-    submitBtn.addEventListener("click", () => {
-      if (nameField.value === '') {
-        nameField.style.border = '2px red solid';
-        alertField.style.display = 'block';
-      }
-    
-      if (emailField.value === '') {
-        emailField.style.border = '2px red solid';
-      }
-    
-      if (textField.value === '') {
-        textField.style.border = '2px red solid';
-      }
-    })
-    
-    // Reset Button
-    
-    resetBtn.addEventListener("click", () => {
-      nameField.value = '';
-      emailField.value = '';
-      numberField.value = '';
-      textField.value = '';
-    })
-    
-    </script>
-    
-    
     
     <footer class="row footer-wrap">
       <div class="small-12 large-6 text-center" id="social-media">
@@ -363,15 +321,13 @@
     
     
     
+    
     <script>
     
     // Opacity style added to home title when scrolling
       $(window).scroll(function(){
         $(".home-title").css("opacity", 1 - $(window).scrollTop() / 350);
       });
-    
-    
-    
     
     </script>
     
