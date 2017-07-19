@@ -24,6 +24,7 @@ $theme-font: 'Raleway', sans-serif;
 
 
 
+
 #home-wrap {
   height: 100vh;
   max-height: 900px;
@@ -164,13 +165,17 @@ $theme-font: 'Raleway', sans-serif;
   background-color: $white;
   color: $theme-color;
   .row {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 25px;
+    }
   }
 }
 
 .card {
   color: $theme-color;
   border-radius: 4px;
+  margin-bottom: 40px;
   .card-section {
     padding-bottom: 25px;
     padding-top: 30px;
@@ -268,7 +273,25 @@ $theme-font: 'Raleway', sans-serif;
         font-weight: 700;
         @include transEffect;
       }
+      .submit-icon {
+        padding-left: 5px;
+      }
+      .reset-icon {
+        padding-left: 5px;
+      }
     }
+  }
+
+  .required-text {
+    font-size: 1.1rem;
+    text-align: left;
+    &:before {
+      content: '*';
+      font-size: 1.3rem;
+    }
+  }
+  #alert-fields {
+    display: none;
   }
 }
 
@@ -323,7 +346,7 @@ $theme-font: 'Raleway', sans-serif;
   }
   .top-bar-right ul {
     background: transparent;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     li {
       &:hover {
         background: none;
@@ -340,17 +363,39 @@ $theme-font: 'Raleway', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
+
+// Navigation Bar
+  .top-bar-right ul {
+    font-size: 1.4rem;
+  }
+
+
+
+// Section 2
   .service-icon {
-    font-size: 6.5rem;
-  
+    font-size: 10rem;
+    display: block;
   }
-  #section-2-wrap #first-row {
+  #section-2-wrap .row {
+    margin-bottom: 50px;
 
-    vertical-align: middle;
   }
 
 
 
+// Section 4
+  .card {
+    @include transEffect;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      @include transEffect;
+    }
+  }
+
+
+
+// Section 5
   #contact-details {
     margin-top: 90px;
     h3 {
@@ -361,7 +406,10 @@ $theme-font: 'Raleway', sans-serif;
       margin-bottom: 50px;
     }
   }
+
+// Footer
   #privacy-footer {
     margin-top: 25px;
   }
+
 }
