@@ -9,7 +9,7 @@
 $theme-color: #034d65;
 $alt-theme-color: #006081;
 $theme-font: 'Raleway', sans-serif;
-
+$active-color: #3f86a4;
 
 // Mixins
 @mixin transEffect {
@@ -95,7 +95,6 @@ $theme-font: 'Raleway', sans-serif;
       color: $white;
     }
   }
-
 }
 
 #responsive-menu {
@@ -360,6 +359,10 @@ $theme-font: 'Raleway', sans-serif;
       }
     }
   }
+  .menu .active > a {
+    background-color: transparent;
+    color: $active-color;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -412,4 +415,12 @@ $theme-font: 'Raleway', sans-serif;
     margin-top: 25px;
   }
 
+}
+
+
+@media screen and (max-height: 420px) {
+  .home-title {
+    font-size: 1.4rem;
+    line-height: 2;
+  }
 }
