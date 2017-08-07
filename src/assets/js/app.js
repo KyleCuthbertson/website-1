@@ -12,6 +12,9 @@ import Foundation from 'foundation-sites';
 
 
 // Contact Form JS
+
+// Using ES6 - Arrow Functions and const & let 
+
 // Variables
 const resetBtn = document.getElementById('resetButton');
 const submitBtn = document.getElementById('sendButton');
@@ -24,7 +27,7 @@ const numberField = document.getElementById('number');
 const textField = document.getElementById('textarea');
 
 
-// Submit Butto
+// Submit Button
 submitBtn.addEventListener("click", () => {
   if (nameField.value === '') {
     nameField.style.border = '2px red solid';
