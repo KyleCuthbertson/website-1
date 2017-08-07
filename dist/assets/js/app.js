@@ -14492,6 +14492,9 @@ window.$ = _jquery2.default;
 
 
 // Contact Form JS
+
+// Using ES6 - Arrow Functions and const & let 
+
 // Variables
 var resetBtn = document.getElementById('resetButton');
 var submitBtn = document.getElementById('sendButton');
@@ -14503,7 +14506,7 @@ var emailField = document.getElementById('email');
 var numberField = document.getElementById('number');
 var textField = document.getElementById('textarea');
 
-// Submit Butto
+// Submit Button
 submitBtn.addEventListener("click", function () {
   if (nameField.value === '') {
     nameField.style.border = '2px red solid';
