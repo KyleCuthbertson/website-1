@@ -1,2 +1,2 @@
 # Website One
-Website using Zurb Foundation framework
+Very basic website using Zurb Foundation framework
